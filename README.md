@@ -1,173 +1,79 @@
 # HR Analytics Dashboard
 
-An interactive **HR Analytics Dashboard** built in **Power BI** to analyze employee attrition, workforce demographics, salary distribution, and key HR metrics. The dashboard provides valuable insights into employee turnover patterns and supports data-driven HR decision-making.
-
----
+An interactive Power BI dashboard that analyzes employee attrition, workforce demographics, salary distribution and job roles. It shows where attrition is concentrated and which groups are most likely to leave.
 
 ## Dashboard Preview
 
 ![HR Analytics Dashboard](Images/Dashboard.png)
 
----
+## Dataset
 
-## Project Overview
+- `HR_Analytics.csv`: 1,480 rows and 38 columns. Ten employee IDs appear twice, so the dashboard reports the 1,470 unique employees.
+- Fields include age, gender, department, job role, education field, monthly income, job satisfaction, years at company and attrition status.
 
-This project analyzes HR employee data to identify trends and patterns related to workforce attrition. The dashboard presents key HR metrics through interactive visualizations, enabling users to explore employee demographics, salary distribution, education, job roles, and years at the company.
+## Key Metrics
 
-It is designed to help HR professionals monitor workforce performance, identify areas with high attrition, and gain meaningful insights for employee retention.
-
----
-
-## Key Performance Indicators (KPIs)
-
-- **Total Employees:** 1.47K
-- **Attrition Count:** 237
-- **Attrition Rate:** 16.1%
-- **Average Age:** 37 Years
-- **Average Salary:** 6.5K
-- **Average Years at Company:** 7.0 Years
-
----
-
-## Dashboard Features
-
-- Interactive KPI cards
-- Department-wise filtering using slicers
-- Attrition by Education
-- Attrition by Age Group
-- Attrition by Gender
-- Attrition by Salary Slab
-- Attrition by Job Role
-- Attrition by Years at Company
-- Job Role-wise attrition matrix
-- Dynamic and interactive visualizations
-
----
-
-## Project Highlights
-
-- Built an interactive HR Analytics Dashboard using Power BI Desktop.
-- Cleaned and transformed HR data using Power Query.
-- Used DAX measures to calculate key HR metrics.
-- Created calculated columns to categorize employee data.
-- Designed interactive dashboards using KPI cards, slicers, charts, and matrix visuals.
-- Applied data modeling to build meaningful business insights.
-
----
-
-## DAX Used
-
-### Measures
-
-- **AttritionRate**
-- **AverageAge**
-
-### Calculated Columns
-
-- **AgeGroup**
-- **SalarySlab**
-
----
+| Metric | Value |
+|---|---|
+| Total employees | 1,470 |
+| Attrition (employees who left) | 237 |
+| Attrition rate | 16.1% |
+| Average age | 37 |
+| Average monthly income | 6.5K |
+| Average years at company | 7.0 |
 
 ## Key Insights
 
-- Employees aged **26–35** have the highest attrition.
-- Employees earning **up to 5K** contribute the highest attrition.
-- **Life Sciences** has the highest attrition among education fields.
-- **Laboratory Technicians** and **Sales Executives** show the highest attrition.
-- Male employees account for a higher number of attrition cases than female employees.
-- Department slicers enable quick comparison across Human Resources, Research & Development, and Sales.
+The dashboard shows attrition counts. The rates below (leavers as a share of each group) show where the risk is highest.
 
----
+- **Sales Representatives leave most often**: a 39.8% attrition rate, against 16.1% overall. Laboratory Technicians have the most leavers (62), with a 23.9% rate.
+- **Younger employees are the highest risk.** Ages 18-25 have a 35.8% attrition rate. Ages 26-35 have the most leavers (116) at a 19.1% rate, and ages 36-45 have the lowest rate (9.2%).
+- **Low pay is linked to leaving.** Employees earning up to 5K account for 163 of the 237 leavers (68.8%), with a 21.8% rate. Employees earning 15K or more have a 3.8% rate.
+- **The first year is the danger point.** More employees leave after 1 year at the company (59) than at any other tenure.
+- **Sales has the highest departmental rate** (20.6%), ahead of Human Resources (19.0%) and Research & Development (13.8%).
+- **Male employees leave slightly more often**: 150 leavers (17.0% rate) against 87 for female employees (14.8%).
 
-## Tools & Technologies
+### Additional findings from the dataset (not on the dashboard)
 
-- Power BI Desktop
-- Power Query
-- DAX
-- Data Modeling
-- Interactive Visualizations
+- Employees who work overtime have a 30.5% attrition rate, against 10.4% for those who do not.
+- Single employees have a 25.5% attrition rate, against 12.5% for married employees.
 
----
+## Dashboard Features
 
-## Dataset
+- KPI cards: total employees, attrition, attrition rate, average age, average income, average years at company
+- Department slicers (Human Resources, Research & Development, Sales)
+- Attrition by gender, education field, age group, salary slab, years at company and job role
+- Job role matrix showing attrition by job satisfaction level (1 to 4)
 
-The dataset includes HR employee information such as:
+## Power BI Work
 
-- Employee ID
-- Age
-- Gender
-- Department
-- Education
-- Education Field
-- Job Role
-- Monthly Income
-- Business Travel
-- Years at Company
-- Job Satisfaction
-- Work-Life Balance
-- Performance Rating
-- Attrition Status
-
----
+- Loaded and prepared the HR dataset in Power BI Desktop
+- DAX measures: `AttritionRate`, `AverageAge`
+- Categories for age group and salary slab
+- Interactive report with cards, slicers, a matrix and charts
 
 ## Repository Structure
 
 ```text
-HR-Analytics-Dashboard
-│
-├── Dashboard
+HR-Analytics-Dashboard/
+├── Dashboard/
 │   ├── HR_Analytics_Dashboard.pbix
 │   └── HR_Analytics_Dashboard.pdf
-│
-├── Dataset
+├── Dataset/
 │   └── HR_Analytics.csv
-│
-├── Images
+├── Images/
 │   └── Dashboard.png
-│
 └── README.md
 ```
 
----
-
 ## How to Use
 
-1. Clone or download this repository.
-2. Open the `.pbix` file using **Power BI Desktop**.
-3. Refresh the data if required.
-4. Explore the dashboard using the department slicers and interactive visuals.
-
----
-
-## Skills Demonstrated
-
-- Data Cleaning
-- Data Transformation
-- Data Modeling
-- DAX
-- Power Query
-- Dashboard Design
-- Data Visualization
-- Business Intelligence
-- HR Analytics
-- Interactive Reporting
-
----
-
-## Future Improvements
-
-- Add drill-through pages for detailed employee analysis.
-- Include time-based trend analysis.
-- Connect the dashboard to a live data source.
-- Extend the dashboard with predictive HR analytics.
-
----
+1. Download the repository.
+2. Open `HR_Analytics_Dashboard.pbix` in Power BI Desktop.
+3. Click a department in the slicer to filter every visual.
 
 ## Author
 
 **Hrithik Doiphode**
 
-## License
-
-This project is intended for learning, portfolio, and demonstration purposes.
+GitHub: https://github.com/Hrithikdoi
