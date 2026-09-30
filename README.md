@@ -9,7 +9,7 @@ An interactive Power BI dashboard that analyzes employee attrition, workforce de
 ## Dataset
 
 - `HR_Analytics.csv`: 1,480 rows and 38 columns. Ten employee IDs appear twice, so the dashboard reports the 1,470 unique employees.
-- Fields include age, gender, department, job role, education field, monthly income, job satisfaction, years at company and attrition status.
+- Fields include age, age group, gender, department, job role, education field, monthly income, salary slab, job satisfaction, overtime, marital status, years at company and attrition status.
 
 ## Key Metrics
 
@@ -26,12 +26,12 @@ An interactive Power BI dashboard that analyzes employee attrition, workforce de
 
 The dashboard shows attrition counts. The rates below (leavers as a share of each group) show where the risk is highest.
 
-- **Sales Representatives leave most often**: a 39.8% attrition rate, against 16.1% overall. Laboratory Technicians have the most leavers (62), with a 23.9% rate.
+- **Sales Representatives leave most often:** a 39.8% attrition rate, against 16.1% overall. Laboratory Technicians have the most leavers (62), with a 23.9% rate.
 - **Younger employees are the highest risk.** Ages 18-25 have a 35.8% attrition rate. Ages 26-35 have the most leavers (116) at a 19.1% rate, and ages 36-45 have the lowest rate (9.2%).
 - **Low pay is linked to leaving.** Employees earning up to 5K account for 163 of the 237 leavers (68.8%), with a 21.8% rate. Employees earning 15K or more have a 3.8% rate.
 - **The first year is the danger point.** More employees leave after 1 year at the company (59) than at any other tenure.
 - **Sales has the highest departmental rate** (20.6%), ahead of Human Resources (19.0%) and Research & Development (13.8%).
-- **Male employees leave slightly more often**: 150 leavers (17.0% rate) against 87 for female employees (14.8%).
+- **Male employees leave slightly more often:** 150 leavers (17.0% rate) against 87 for female employees (14.8%).
 
 ### Additional findings from the dataset (not on the dashboard)
 
@@ -47,10 +47,14 @@ The dashboard shows attrition counts. The rates below (leavers as a share of eac
 
 ## Power BI Work
 
-- Loaded and prepared the HR dataset in Power BI Desktop
+- Loaded the HR dataset in Power BI Desktop and reported on 1,470 unique employees
 - DAX measures: `AttritionRate`, `AverageAge`
-- Categories for age group and salary slab
-- Interactive report with cards, slicers, a matrix and charts
+- Report with cards, a department slicer, a matrix, and donut, column, bar, area and treemap charts
+
+## Notes on the Visuals
+
+- The **Attrition by Job Role** bar chart shows the top 4 roles by leavers only. The matrix beside it lists all nine roles.
+- The **Attrition by Gender** treemap (140 male, 79 female) and the **Years at Company** chart only include employees with fewer than 12 years at the company. That leaves out 18 leavers, so the treemap totals 219 instead of 237.
 
 ## Repository Structure
 
@@ -75,5 +79,4 @@ HR-Analytics-Dashboard/
 ## Author
 
 **Hrithik Doiphode**
-
 GitHub: https://github.com/Hrithikdoi
